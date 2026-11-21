@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -7,8 +7,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './hijo.html',
 })
 export class Hijo {
-  enviarMensaje() {
-    this.notificarPadre.emit('Mensaje desde el componente hijo');
-  }
-  @Output() notificarPadre = new EventEmitter<string>();
+ mensaje = signal('Mensaje desde el hijo');
+
+ cambiarMensaje(nuevoMensaje: string) {
+   this.mensaje.set(nuevoMensaje);
+ }
 }

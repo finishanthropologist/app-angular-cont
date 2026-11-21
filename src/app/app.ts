@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import {ViewChildComponent } from './view-child/view-child';
+import { Padre } from './padre/padre';
 
 @Component({
-  imports: [ViewChildComponent],
+  imports: [Padre],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
