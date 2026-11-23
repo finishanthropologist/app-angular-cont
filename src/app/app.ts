@@ -3,15 +3,16 @@ import {ViewChildComponent } from './view-child/view-child';
 import { Padre } from './padre/padre';
 import { Mensaje } from './mensaje';
 import { ListadoUsarios } from './listado-usarios/listado-usarios';
+import { EjemploPipes } from './ejemplo-pipes/ejemplo-pipes';
 
 @Component({
-  imports: [ListadoUsarios],
+  imports: [EjemploPipes],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  titulo = "Servicios y Observables en Angular";
+  titulo = "Pipes en Angular";
 
   mensaje: string;
 
