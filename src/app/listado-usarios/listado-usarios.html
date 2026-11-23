@@ -1,0 +1,9 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <ul class="list-group">
+            @for (usuario of usuarios(); track usuario.id) {
+                <li class="list-group-item">{{usuario.id}} {{usuario.name}}</li>
+            }
+        </ul>
+    </div>
+</div>
